@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        minSdkVersion 1
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        all {
+            shrinkResources true
+            minifyEnabled true
+            proguardFile getDefaultProguardFile("proguard-android.txt")
+            proguardFile "proguard-rules.pro"
+        }
+    }
+
+}
+
+dependencies {
+    compile 'com.github.simbiose:Encryption:2.0.1'
+}
